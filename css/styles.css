@@ -1,1 +1,240 @@
-/* Estilos de El Aleph: se agregan en el Día 3 */
+/* =========================================
+   EL ALEPH · Librería y café
+   Hoja de estilos
+   ========================================= */
+
+/* 1. Variables: colores, fuentes y espaciado */
+:root {
+  /* Colores neutros y clásicos */
+  --crema: #F5EFE4;        /* fondo: papel antiguo */
+  --madera: #5A3E2B;       /* títulos, encabezado, botones */
+  --carbon: #2B2B2B;       /* texto principal */
+  --beige: #E8DCC8;        /* tarjetas y secciones */
+  --gris-piedra: #6B6560;  /* texto secundario */
+
+  /* Tipografías con fuentes de respaldo */
+  --fuente-titulos: "Playfair Display", Georgia, serif;
+  --fuente-texto: "Lora", Georgia, serif;
+
+  /* Escala de espaciado en rem */
+  --espacio-xs: 0.5rem;
+  --espacio-s: 1rem;
+  --espacio-m: 1.5rem;
+  --espacio-l: 2rem;
+  --espacio-xl: 3rem;
+}
+
+/* 2. Base */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--fuente-texto);
+  color: var(--carbon);
+  background-color: var(--crema);
+  line-height: 1.7;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--fuente-titulos);
+  color: var(--madera);
+  line-height: 1.3;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 3. Enlaces */
+a {
+  color: var(--madera);
+}
+
+a:hover,
+a:focus {
+  color: var(--carbon);
+}
+
+a:focus,
+button:focus {
+  outline: 3px solid var(--carbon);
+  outline-offset: 3px;
+}
+
+/* 4. Encabezado y navegación */
+header {
+  background-color: var(--madera);
+  padding: var(--espacio-s) var(--espacio-l);
+}
+
+header img {
+  background-color: var(--crema);
+  border-radius: var(--espacio-xs);
+  padding: var(--espacio-xs);
+}
+
+nav ul {
+  list-style: none;
+  margin: var(--espacio-s) 0 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin-right: var(--espacio-m);
+}
+
+nav a {
+  color: var(--crema);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+nav a:hover,
+nav a:focus {
+  color: var(--crema);
+  text-decoration: underline;
+}
+
+header a:focus {
+  outline-color: var(--crema);
+}
+
+/* 5. Contenido principal */
+main {
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: var(--espacio-l) var(--espacio-s);
+}
+
+section {
+  margin-bottom: var(--espacio-xl);
+}
+
+/* 6. Tarjetas (artículos) */
+article {
+  background-color: var(--beige);
+  padding: var(--espacio-m);
+  margin-bottom: var(--espacio-m);
+  border-left: 4px solid var(--madera);
+  border-radius: var(--espacio-xs);
+}
+
+article h3 {
+  margin-top: 0;
+}
+
+/* 7. Contenido complementario */
+aside {
+  background-color: var(--beige);
+  padding: var(--espacio-m);
+  border-radius: var(--espacio-xs);
+  margin-bottom: var(--espacio-l);
+}
+
+/* 8. Tablas */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: var(--espacio-m);
+  background-color: var(--crema);
+}
+
+caption {
+  font-weight: 600;
+  padding: var(--espacio-xs);
+}
+
+th,
+td {
+  padding: var(--espacio-xs) var(--espacio-s);
+  border: 1px solid var(--madera);
+  text-align: left;
+}
+
+thead th {
+  background-color: var(--madera);
+  color: var(--crema);
+}
+
+/* 9. Formulario */
+fieldset {
+  border: 1px solid var(--madera);
+  border-radius: var(--espacio-xs);
+  padding: var(--espacio-m);
+  margin-bottom: var(--espacio-m);
+}
+
+legend {
+  font-family: var(--fuente-titulos);
+  color: var(--madera);
+  padding: 0 var(--espacio-xs);
+}
+
+label {
+  display: block;
+  margin-bottom: var(--espacio-xs);
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: var(--espacio-xs);
+  font-family: var(--fuente-texto);
+  font-size: 1rem;
+  border: 1px solid var(--gris-piedra);
+  border-radius: var(--espacio-xs);
+  background-color: var(--crema);
+}
+
+#datos {
+  width: auto;
+}
+
+#datos + label {
+  display: inline;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 3px solid var(--madera);
+  outline-offset: 2px;
+}
+
+button {
+  background-color: var(--madera);
+  color: var(--crema);
+  font-family: var(--fuente-texto);
+  font-size: 1rem;
+  font-weight: 600;
+  padding: var(--espacio-s) var(--espacio-l);
+  border: none;
+  border-radius: var(--espacio-xs);
+  cursor: pointer;
+}
+
+button:hover,
+button:focus {
+  background-color: var(--carbon);
+}
+
+/* 10. Pie de página */
+footer {
+  background-color: var(--madera);
+  color: var(--crema);
+  text-align: center;
+  padding: var(--espacio-m) var(--espacio-s);
+}
+
+footer a {
+  color: var(--crema);
+}
