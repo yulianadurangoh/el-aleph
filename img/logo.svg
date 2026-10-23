@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="60" viewBox="0 0 220 60">
+  <path d="M10 15 Q25 8 40 15 L40 48 Q25 41 10 48 Z" fill="none" stroke="#5a3e2b" stroke-width="3"/>
+  <path d="M40 15 Q55 8 70 15 L70 48 Q55 41 40 48 Z" fill="none" stroke="#5a3e2b" stroke-width="3"/>
+  <text x="82" y="40" font-family="Georgia, serif" font-size="26" font-weight="bold" fill="#5a3e2b">El Aleph</text>
+</svg>
