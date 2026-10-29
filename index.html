@@ -17,7 +17,7 @@
 
 <body>
   <header class="encabezado-bootstrap">
-    <nav class="navbar navbar-expand-lg navbar-aleph" data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg">
       <div class="container">
         <a class="navbar-brand" href="index.html"><img src="img/logo.svg" alt="El Aleph, ir al inicio" width="200"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú de navegación">
@@ -96,7 +96,7 @@
       </div>
     </section>
 
-    <div class="row g-4">
+    <div class="row g-4 align-items-start">
       <section id="reservar" class="col-12 col-md-8">
         <h2 class="titulo-seccion">Reserva tu mesa para la noche de jazz</h2>
 
@@ -108,13 +108,13 @@
         <form action="#" method="post" class="needs-validation" novalidate>
           <div class="mb-3">
             <label for="nombre" class="form-label">Nombre completo</label>
-            <input type="text" id="nombre" name="nombre" class="form-control" required minlength="3" autocomplete="name">
+            <input type="text" id="nombre" name="nombre" class="form-control" required minlength="3">
             <div class="invalid-feedback">Escribe tu nombre (mínimo 3 letras).</div>
           </div>
 
           <div class="mb-3">
             <label for="correo" class="form-label">Correo electrónico</label>
-            <input type="email" id="correo" name="correo" class="form-control" required autocomplete="email">
+            <input type="email" id="correo" name="correo" class="form-control" required>
             <div class="invalid-feedback">Escribe un correo válido, por ejemplo nombre@correo.com.</div>
           </div>
 
@@ -154,7 +154,7 @@
         </form>
       </section>
 
-      <aside class="col-12 col-md-4 align-self-start">
+      <aside class="col-12 col-md-4">
         <h2>¿Por qué "El Aleph"?</h2>
         <p>Nuestro nombre viene del cuento <em>El Aleph</em> de Jorge Luis Borges, publicado en 1945. En el cuento, el Aleph es un punto que contiene todo el universo. Así imaginamos una librería: un lugar pequeño donde caben todas las historias.</p>
       </aside>
@@ -192,7 +192,7 @@
     </div>
     <div>
       <p><strong>Contacto</strong></p>
-      <p><i class="bi bi-envelope" aria-hidden="true"></i> <a href="mailto:hola@elaleph.example">hola@elaleph.example</a></p>
+      <p><i class="bi bi-envelope" aria-hidden="true"></i> <a href="mailto:contacto@libreriaelaleph.com">contacto@libreriaelaleph.com</a></p>
     </div>
     <div>
       <p><strong>Horario</strong></p>

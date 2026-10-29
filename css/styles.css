@@ -143,7 +143,7 @@ section {
 article {
   background-color: var(--beige);
   padding: var(--espacio-m);
-  border-left: 4px solid var(--madera);
+  border: 1px solid var(--madera);
   border-radius: var(--espacio-xs);
 }
 
@@ -290,9 +290,9 @@ footer a {
   }
 }
 
-/* 12. Componentes de Bootstrap con la paleta de El Aleph */
+/* 12. Bootstrap con los colores de El Aleph */
 
-/* Botón principal (btn-primary) con el color Madera */
+/* Botón principal con el color Madera */
 .btn-primary {
   --bs-btn-bg: #5A3E2B;
   --bs-btn-border-color: #5A3E2B;
@@ -302,7 +302,7 @@ footer a {
   --bs-btn-active-border-color: #34241A;
 }
 
-/* Botón de contorno (btn-outline-primary) con el color Madera */
+/* Botón de contorno con el color Madera */
 .btn-outline-primary {
   --bs-btn-color: #5A3E2B;
   --bs-btn-border-color: #5A3E2B;
@@ -314,37 +314,37 @@ footer a {
   --bs-btn-active-border-color: #46301F;
 }
 
-/* Encabezado con la navbar de Bootstrap: el Flexbox y el relleno
-   de la regla "header" ya no hacen falta, los pone la navbar */
+/* Encabezado de la navbar: le quito el Flexbox de la regla header */
 .encabezado-bootstrap {
   display: block;
   padding: 0;
+  background-color: var(--beige);
 }
 
-/* Navbar con fondo Madera y enlaces Crema.
-   data-bs-theme="dark" (en el HTML) pone claro el ícono ☰, pero deja los
-   enlaces muy transparentes; uso dos clases (.navbar.navbar-aleph) para
-   ganarle en especificidad a esa regla de Bootstrap */
-.navbar.navbar-aleph {
-  background-color: var(--madera);
-  --bs-navbar-color: #F5EFE4;
-  --bs-navbar-hover-color: #FFFFFF;
-  --bs-navbar-active-color: #FFFFFF;
+/* Enlaces de la navbar */
+.navbar .nav-link {
+  color: var(--madera);
 }
 
-.navbar-aleph .nav-link:hover,
-.navbar-aleph .nav-link:focus {
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+  color: var(--carbon);
   text-decoration: underline;
 }
 
-/* Página actual (Bootstrap la marca con la clase active) */
-.navbar-aleph .nav-link.active {
+/* Página actual */
+.navbar .nav-link.active {
+  color: var(--madera);
   font-weight: 600;
   text-decoration: underline;
 }
 
-/* La regla "button" del formulario de contacto pinta el fondo al pasar
-   el mouse; el botón ☰ y la X de cerrar deben quedar transparentes */
+/* El foco crema no se ve sobre el beige */
+.encabezado-bootstrap a:focus {
+  outline-color: var(--carbon);
+}
+
+/* Que el botón del menú y la X no se pongan oscuros con el hover */
 .navbar-toggler:hover,
 .navbar-toggler:focus,
 .btn-close:hover,
@@ -352,28 +352,25 @@ footer a {
   background-color: transparent;
 }
 
-/* Títulos de sección con una línea Madera debajo */
+/* Títulos con una línea debajo */
 .titulo-seccion {
   padding-bottom: var(--espacio-xs);
   border-bottom: 3px solid var(--madera);
   display: inline-block;
 }
 
-/* Tarjetas: fondo Beige y borde superior Madera.
-   Las cards de Bootstrap ya traen su relleno en card-body */
+/* Tarjetas de Bootstrap con fondo Beige */
 .card-aleph {
   padding: 0;
   background-color: var(--beige);
-  border-top: 4px solid var(--madera);
+  border: 1px solid var(--madera);
 }
 
-/* Bootstrap agranda los h3; los dejo de un tamaño más moderado */
 .card-aleph h3 {
   font-size: 1.25rem;
 }
 
-/* El borde gris claro de Bootstrap casi no se ve sobre el fondo Crema;
-   uso Gris Piedra para que los campos se distingan (5.2:1) */
+/* Borde de los campos más oscuro para que se vean */
 .form-control,
 .form-select,
 .form-check-input {

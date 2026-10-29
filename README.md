@@ -38,19 +38,18 @@ Conflictos que encontré al agregar Bootstrap:
 **Decisión:** para las tarjetas del sitio, Bootstrap me ahorra tiempo y hace fácil cambiar las columnas por breakpoint. Mantengo `styles.css` para la identidad visual (colores, tipografía, fondo y bordes de las tarjetas).
 ## Landing page con Bootstrap
 
-La página de inicio (`index.html`) usa estos componentes de Bootstrap:
-- **Navbar** con menú colapsable: desde 992px (`lg`) se ven los enlaces; en celular aparece el botón ☰.
-- **Cards** en "Lo que encontrarás", con íconos de Bootstrap Icons y el botón al final de cada tarjeta (`mt-auto`).
-- **Formulario** para reservar mesa en la noche de jazz, con validación de Bootstrap (`needs-validation`, `novalidate` e `invalid-feedback`).
-- **Modal** con las políticas de reserva y una **alerta** con el horario del jazz.
+En el inicio (`index.html`) usé estos componentes de Bootstrap:
+- Navbar que se vuelve menú ☰ en celular.
+- Cards en "Lo que encontrarás", con íconos de Bootstrap Icons.
+- Formulario para reservar mesa en la noche de jazz, con la validación de Bootstrap.
+- Modal con las políticas de reserva y una alerta con el horario del jazz.
 
-Personalización con la paleta del proyecto (en `styles.css`, cargado después de Bootstrap):
-- Variables globales `--bs-*` en `:root`: color principal Madera, fondo Crema, texto Carbón y fuente Lora.
-- Los botones tienen sus propias variables (`--bs-btn-*`), por eso `.btn-primary` y `.btn-outline-primary` se personalizan aparte.
-- Clases propias: `.navbar-aleph` (navbar Madera con enlaces Crema), `.card-aleph` (tarjetas Beige con borde Madera) y `.titulo-seccion`.
+Para ponerle los colores de El Aleph:
+- Cambié las variables `--bs-*` en `:root` (color principal Madera, fondo Crema y letra Lora).
+- Los botones tienen sus propias variables (`--bs-btn-*`), por eso los cambié aparte.
+- Hice clases propias: `.encabezado-bootstrap`, `.card-aleph` y `.titulo-seccion`.
 
-Conflictos que encontré y cómo los resolví (sin usar `!important`):
-- La regla `header` (Flexbox y relleno) desacomodaba la navbar: la clase `.encabezado-bootstrap` la deja en `display: block` y sin relleno.
-- Con `data-bs-theme="dark"` los enlaces de la navbar quedaban muy transparentes: uso `.navbar.navbar-aleph` (dos clases) para ganar en especificidad.
-- La regla `button` del formulario de contacto pintaba el fondo del botón ☰ y de la X al pasar el mouse: los dejo transparentes.
-- El borde gris claro de los campos casi no se veía sobre el fondo Crema: uso Gris Piedra.
+Problemas que tuve con mi CSS anterior:
+- La regla `header` tenía Flexbox y desacomodaba la navbar. Lo arreglé con la clase `.encabezado-bootstrap`.
+- La regla `button` ponía oscuro el botón ☰ y la X al pasar el mouse. Los dejé con fondo transparente.
+- Los bordes de los campos casi no se veían sobre el fondo crema. Los puse Gris Piedra.
