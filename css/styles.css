@@ -22,6 +22,16 @@
   --espacio-m: 1.5rem;
   --espacio-l: 2rem;
   --espacio-xl: 3rem;
+
+  /* Variables de Bootstrap con los valores de la marca */
+  --bs-primary: #5A3E2B;
+  --bs-primary-rgb: 90, 62, 43;
+  --bs-body-font-family: "Lora", Georgia, serif;
+  --bs-body-color: #2B2B2B;
+  --bs-body-bg: #F5EFE4;
+  --bs-link-color-rgb: 90, 62, 43;
+  --bs-link-hover-color-rgb: 43, 43, 43;
+  --bs-border-radius: 0.5rem;
 }
 
 /* 2. Base */
@@ -278,4 +288,94 @@ footer a {
   .contacto-layout {
     grid-template-columns: 2fr 1fr;
   }
+}
+
+/* 12. Componentes de Bootstrap con la paleta de El Aleph */
+
+/* Botón principal (btn-primary) con el color Madera */
+.btn-primary {
+  --bs-btn-bg: #5A3E2B;
+  --bs-btn-border-color: #5A3E2B;
+  --bs-btn-hover-bg: #46301F;
+  --bs-btn-hover-border-color: #46301F;
+  --bs-btn-active-bg: #34241A;
+  --bs-btn-active-border-color: #34241A;
+}
+
+/* Botón de contorno (btn-outline-primary) con el color Madera */
+.btn-outline-primary {
+  --bs-btn-color: #5A3E2B;
+  --bs-btn-border-color: #5A3E2B;
+  --bs-btn-hover-color: #F5EFE4;
+  --bs-btn-hover-bg: #5A3E2B;
+  --bs-btn-hover-border-color: #5A3E2B;
+  --bs-btn-active-color: #F5EFE4;
+  --bs-btn-active-bg: #46301F;
+  --bs-btn-active-border-color: #46301F;
+}
+
+/* Encabezado con la navbar de Bootstrap: el Flexbox y el relleno
+   de la regla "header" ya no hacen falta, los pone la navbar */
+.encabezado-bootstrap {
+  display: block;
+  padding: 0;
+}
+
+/* Navbar con fondo Madera y enlaces Crema.
+   data-bs-theme="dark" (en el HTML) pone claro el ícono ☰, pero deja los
+   enlaces muy transparentes; uso dos clases (.navbar.navbar-aleph) para
+   ganarle en especificidad a esa regla de Bootstrap */
+.navbar.navbar-aleph {
+  background-color: var(--madera);
+  --bs-navbar-color: #F5EFE4;
+  --bs-navbar-hover-color: #FFFFFF;
+  --bs-navbar-active-color: #FFFFFF;
+}
+
+.navbar-aleph .nav-link:hover,
+.navbar-aleph .nav-link:focus {
+  text-decoration: underline;
+}
+
+/* Página actual (Bootstrap la marca con la clase active) */
+.navbar-aleph .nav-link.active {
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+/* La regla "button" del formulario de contacto pinta el fondo al pasar
+   el mouse; el botón ☰ y la X de cerrar deben quedar transparentes */
+.navbar-toggler:hover,
+.navbar-toggler:focus,
+.btn-close:hover,
+.btn-close:focus {
+  background-color: transparent;
+}
+
+/* Títulos de sección con una línea Madera debajo */
+.titulo-seccion {
+  padding-bottom: var(--espacio-xs);
+  border-bottom: 3px solid var(--madera);
+  display: inline-block;
+}
+
+/* Tarjetas: fondo Beige y borde superior Madera.
+   Las cards de Bootstrap ya traen su relleno en card-body */
+.card-aleph {
+  padding: 0;
+  background-color: var(--beige);
+  border-top: 4px solid var(--madera);
+}
+
+/* Bootstrap agranda los h3; los dejo de un tamaño más moderado */
+.card-aleph h3 {
+  font-size: 1.25rem;
+}
+
+/* El borde gris claro de Bootstrap casi no se ve sobre el fondo Crema;
+   uso Gris Piedra para que los campos se distingan (5.2:1) */
+.form-control,
+.form-select,
+.form-check-input {
+  border-color: var(--gris-piedra);
 }
